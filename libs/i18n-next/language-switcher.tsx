@@ -40,7 +40,7 @@ export function LanguageSwitcher() {
           <div className="">{languagesList[selectedItem]}</div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-fit">
+      <DropdownMenuContent className="w-fit dark:bg-black border-none rounded-xl">
         {i18nConfig.languages.map((item) => {
           return (
             <DropdownMenuItem

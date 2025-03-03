@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18NextHtmlProvider } from "@/libs/i18n-next/i18n-next-html-provider";
 
+import { Navbar } from "@/components/navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +37,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="p-4">
+            <Navbar />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </I18NextHtmlProvider>
