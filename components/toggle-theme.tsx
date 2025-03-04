@@ -14,9 +14,11 @@ import {
 import { useTranslation } from "@/libs/i18n-next/use-translation";
 
 export function ToggleTheme() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   const { t } = useTranslation(["common"]);
+
+  console.log("THEME", theme);
 
   return (
     <DropdownMenu>
